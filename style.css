@@ -1,0 +1,400 @@
+/* Общие стили */
+
+/* Теговий селектор для body */
+body {
+  font-family: 'Roboto', sans-serif; /* Используем более современный шрифт */
+  background-image: url('back.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #E5E5E5;
+  margin: 0;
+  line-height: 1.6; /* Увеличиваем межстрочное расстояние для удобства чтения */
+}
+
+/* Класовий селектор для header */
+.header {
+  background-color: rgba(0, 0, 0, 0.7); /* Темнее фон */
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Кнопки сдвигаем к правой части */
+  padding: 0 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Добавляем тень для эффекта */
+}
+
+/* Класовий селектор для кнопок в header */
+.header .button {
+  background-color: rgba(0, 0, 0, 0.5); /* Темный фон с прозрачностью */
+  color: white;
+  border: 2px solid #4A90E2;
+  padding: 12px 25px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  background-size: cover; /* Для растягивания фона */
+  background-position: center; /* Центрируем изображение */
+  height: 120px; /* Устанавливаем высоту кнопки */
+  width: 180px; /* Устанавливаем ширину кнопки */
+}
+
+/* Кнопка для Мюнхена */
+.header .button.munich {
+  background-image: url('munich.jpg'); /* Путь к изображению для Мюнхена */
+}
+
+/* Кнопка для Регенсбурга */
+.header .button.regensburg {
+  background-image: url('regensburg.jpg'); /* Путь к изображению для Регенсбурга */
+}
+
+/* Кнопка для Гармиша */
+.header .button.garmisch {
+  background-image: url('garmisch.jpg'); /* Путь к изображению для Гармиша */
+}
+
+/* Псевдоклассы для кнопок при наведении */
+.header .button:hover {
+  background-color: #357ABD;
+  border-color: #357ABD;
+  transform: scale(1.1);
+}
+
+/* Псевдоклассы для кнопок при наведении (для отдельных кнопок) */
+.header .button.munich:hover {
+  background-image: url('cities/Munchen.jpg'); /* Изменяем изображение при наведении для Мюнхена */
+}
+
+.header .button.regensburg:hover {
+  background-image: url('cities/Regensburg.jpg'); /* Изменяем изображение при наведении для Регенсбурга */
+}
+
+.header .button.garmisch:hover {
+  background-image: url('cities/Garmisch-Partenkirchen.jpg'); /* Изменяем изображение при наведении для Гармиша */
+}
+
+/* Идентификатор для формы отправки */
+#booking-form-submit {
+  background-color: #4A90E2;
+  color: white;
+  cursor: pointer;
+  padding: 12px 25px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Псевдокласс для поля ввода, когда оно в фокусе */
+input:focus {
+  outline: none;
+  border-color: #4A90E2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.6); /* Добавляем мягкую тень при фокусе */
+}
+
+/* Атрибутный селектор для полей формы с обязательным вводом */
+input[required] {
+  background-color: #555;
+}
+
+/* Атрибутный селектор для поля ввода email, когда оно в фокусе */
+input[type="email"]:focus {
+  background-color: #333;
+  border: 1px solid #4A90E2;
+}
+
+/* Теговий селектор для h1 */
+h1 {
+  font-size: 26px; /* Увеличиваем размер заголовка */
+  color: #4A90E2;
+  text-align: center; /* Центрируем заголовок */
+  text-transform: uppercase; /* Заглавные буквы */
+  letter-spacing: 2px; /* Добавляем немного расстояния между буквами */
+}
+
+/* Класовий селектор для списков */
+.destination-list {
+  list-style-type: circle;
+  margin-left: 20px;
+  color: #4A90E2;
+}
+
+/* Теговий селектор для таблицы */
+table {
+  width: 60%; /* Увеличиваем ширину таблицы */
+  border-collapse: collapse;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Класовий селектор для ячеек таблицы */
+.destination-table th, .destination-table td {
+  padding: 15px; /* Увеличиваем отступы */
+  text-align: left;
+  border-bottom: 2px solid #4A90E2; /* Линия под ячейками */
+}
+
+/* Класовий селектор для заголовков таблицы */
+.destination-table th {
+  background-color: #4A90E2;
+  color: white;
+}
+
+/* Атрибутный селектор для полей ввода телефона, когда введен правильный номер */
+input[type="tel"]:valid {
+  background-color: #7CFC00;
+}
+
+/* Атрибутный селектор для полей ввода телефона, когда введен неправильный номер */
+input[type="tel"]:invalid {
+  background-color: #FF6347;
+}
+
+/* Класовий селектор для шагов бронирования */
+.booking-steps {
+  margin-top: 30px;
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Идентификатор для текста подтверждения */
+#confirmation-text {
+  font-size: 18px;
+  color: #FFD700;
+  text-align: center;
+  font-style: italic; /* Добавляем курсив для выделения */
+}
+
+/* Теговий селектор для footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.7); /* Темнее фон */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Комбинированный селектор для input и submit */
+form input[type="submit"] {
+  margin-top: 20px;
+  background-color: #4A90E2;
+  cursor: pointer;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+/* Псевдокласс для кнопки при наведении */
+form input[type="submit"]:hover {
+  background-color: #357ABD;
+}
+
+/* Для телефонов (например, 320px до 599px) */
+@media (max-width: 599px) {
+  body {
+    font-size: 14px; /* Уменьшаем шрифт для телефонов */
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 22px; /* Уменьшаем размер заголовка */
+    word-wrap: break-word; /* Переносим длинные строки */
+    line-height: 1.2; /* Уменьшаем межстрочное расстояние */
+    text-align: center; /* Центрируем заголовок */
+  }
+
+  .header {
+    height: 80px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header .button {
+    width: 120px; /* Уменьшаем кнопки */
+    height: 50px;
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .welcome-text {
+    font-size: 18px; /* Уменьшаем размер текста "Вітаємо" */
+    text-align: center; /* Центрируем текст */
+    padding: 20px; /* Добавляем отступы для удобства */
+    word-break: break-word; /* Принудительный перенос длинных слов */
+    line-height: 1.4;
+  }
+
+  .about-section {
+    font-size: 14px; /* Уменьшаем текст в блоках */
+    line-height: 1.5;
+    padding: 10px;
+  }
+
+  .about-us {
+    padding: 10px;
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  /* Уменьшаем размер таблицы и ячеек */
+  table {
+    width: 100%; /* Полная ширина таблицы */
+    font-size: 12px;
+  }
+
+  .destination-table th, .destination-table td {
+    padding: 10px;
+    font-size: 12px; /* Уменьшаем шрифт в ячейках */
+  }
+
+  /* Уменьшаем размер шрифта для футера */
+  footer {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+/* Медиазапрос для планшетных устройств (от 768px до 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+    /* Шапка */
+    .header {
+        height: 120px; /* Уменьшаем высоту шапки */
+        padding: 0 15px; /* Уменьшаем отступы */
+        flex-direction: column; /* Располагаем элементы в колонку для лучшей видимости */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Кнопки в шапке */
+    .header .button {
+        width: 150px; /* Уменьшаем ширину кнопок */
+        height: 100px; /* Уменьшаем высоту кнопок */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+        font-size: 16px; /* Уменьшаем размер шрифта */
+        margin: 5px 0; /* Уменьшаем отступы между кнопками */
+    }
+
+    /* Заголовки */
+    h1 {
+        font-size: 22px; /* Уменьшаем размер заголовка */
+    }
+
+    /* Списки */
+    .destination-list {
+        margin-left: 10px; /* Уменьшаем отступы слева */
+    }
+
+    /* Таблица */
+    table {
+        width: 100%; /* Расширяем таблицу на всю ширину */
+        margin-top: 20px; /* Уменьшаем верхний отступ */
+    }
+
+    /* Ячейки таблицы */
+    .destination-table th, .destination-table td {
+        padding: 12px; /* Уменьшаем отступы внутри ячеек */
+    }
+
+    /* Кнопки для выбора направления */
+    .destination-button {
+        padding: 10px 20px; /* Уменьшаем отступы кнопок */
+        font-size: 16px; /* Уменьшаем шрифт кнопок */
+    }
+
+    /* Формы */
+    .booking-form input {
+        padding: 10px; /* Уменьшаем отступы в полях ввода */
+        font-size: 14px; /* Уменьшаем размер шрифта в полях */
+    }
+
+    /* Кнопка отправки формы */
+    #booking-form-submit {
+        width: 100%; /* Ширина кнопки на весь экран */
+        font-size: 16px; /* Уменьшаем шрифт */
+    }
+    
+    /* Шаги бронирования */
+    .booking-steps {
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
+
+    /* Footer */
+    footer {
+        font-size: 14px; /* Уменьшаем шрифт в футере */
+    }
+}
+
+/* Медиазапрос для мобильных устройств (до 767px) */
+@media screen and (max-width: 767px) {
+
+    /* Шапка */
+    .header {
+        height: 100px; /* Уменьшаем высоту шапки */
+        flex-direction: column; /* Элементы в колонку */
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px; /* Меньше отступов */
+    }
+
+    /* Кнопки */
+    .header .button {
+        width: 120px; /* Уменьшаем размер кнопок */
+        height: 80px; /* Уменьшаем размер кнопок */
+        font-size: 14px; /* Уменьшаем шрифт */
+    }
+
+    /* Заголовок */
+    h1 {
+        font-size: 18px; /* Меньший размер заголовка */
+    }
+
+    /* Список */
+    .destination-list {
+        margin-left: 5px; /* Меньше отступов */
+    }
+
+    /* Таблица */
+    table {
+        width: 100%; /* Ширина таблицы */
+        font-size: 14px; /* Меньше шрифт */
+    }
+
+    /* Ячейки таблицы */
+    .destination-table th, .destination-table td {
+        padding: 10px; /* Меньше отступов */
+    }
+
+    /* Кнопки */
+    .destination-button {
+        font-size: 14px; /* Меньше шрифт */
+    }
+
+    /* Кнопки отправки формы */
+    #booking-form-submit {
+        width: 100%; /* Кнопка на всю ширину */
+        font-size: 16px;
+    }
+
+    /* Формы */
+    .booking-form input {
+        padding: 10px; /* Меньше отступов */
+        font-size: 14px; /* Меньше шрифт */
+    }
+
+    /* Шаги бронирования */
+    .booking-steps {
+        font-size: 14px; /* Меньше шрифт */
+    }
+
+    /* Footer */
+    footer {
+        font-size: 12px; /* Меньше шрифт */
+    }
+}
