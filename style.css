@@ -331,70 +331,34 @@ form input[type="submit"]:hover {
     }
 }
 
-/* Медиазапрос для мобильных устройств (до 767px) */
-@media screen and (max-width: 767px) {
+/* Десктопная версия (экран 1024px и больше) */
+@media (min-width: 1024px) {
+  /* Применяем стили только для десктопных экранов */
+  
+  .welcome-text {
+    font-size: 36px; /* Увеличиваем размер текста на десктопе */
+    text-align: center; /* Центрируем текст */
+    margin-top: 50px; /* Добавляем отступ сверху */
+  }
+  
+  .header {
+    height: 150px; /* Увеличиваем высоту header для десктопа */
+    padding: 0 30px; /* Добавляем отступы слева и справа */
+  }
 
-    /* Шапка */
-    .header {
-        height: 100px; /* Уменьшаем высоту шапки */
-        flex-direction: column; /* Элементы в колонку */
-        justify-content: center;
-        align-items: center;
-        padding: 0 10px; /* Меньше отступов */
-    }
+  .header .button {
+    padding: 15px 30px; /* Увеличиваем кнопки */
+    font-size: 20px; /* Увеличиваем шрифт кнопок */
+    width: 220px; /* Увеличиваем ширину кнопок */
+  }
 
-    /* Кнопки */
-    .header .button {
-        width: 120px; /* Уменьшаем размер кнопок */
-        height: 80px; /* Уменьшаем размер кнопок */
-        font-size: 14px; /* Уменьшаем шрифт */
-    }
+  .destination-table th, .destination-table td {
+    padding: 20px; /* Увеличиваем отступы ячеек в таблице */
+  }
 
-    /* Заголовок */
-    h1 {
-        font-size: 18px; /* Меньший размер заголовка */
-    }
+  .destination-list {
+    font-size: 20px; /* Увеличиваем шрифт списка */
+  }
 
-    /* Список */
-    .destination-list {
-        margin-left: 5px; /* Меньше отступов */
-    }
-
-    /* Таблица */
-    table {
-        width: 100%; /* Ширина таблицы */
-        font-size: 14px; /* Меньше шрифт */
-    }
-
-    /* Ячейки таблицы */
-    .destination-table th, .destination-table td {
-        padding: 10px; /* Меньше отступов */
-    }
-
-    /* Кнопки */
-    .destination-button {
-        font-size: 14px; /* Меньше шрифт */
-    }
-
-    /* Кнопки отправки формы */
-    #booking-form-submit {
-        width: 100%; /* Кнопка на всю ширину */
-        font-size: 16px;
-    }
-
-    /* Формы */
-    .booking-form input {
-        padding: 10px; /* Меньше отступов */
-        font-size: 14px; /* Меньше шрифт */
-    }
-
-    /* Шаги бронирования */
-    .booking-steps {
-        font-size: 14px; /* Меньше шрифт */
-    }
-
-    /* Footer */
-    footer {
-        font-size: 12px; /* Меньше шрифт */
-    }
+  /* Дополнительные стили для других элементов, если нужно */
 }
